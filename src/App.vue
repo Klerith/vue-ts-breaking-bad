@@ -1,14 +1,25 @@
 <script setup lang="ts">
+import { RouterView } from 'vue-router';
+import NavBar from '@/shared/components/NavBar.vue';
 
-import { ref } from 'vue';
-const counter = ref<number>(0);
+import { routeLinks } from './router/link-routes';
 
 </script>
 
+
 <template>
   <div class="wrapper">
-    <h1>Counter: {{ counter }}</h1>
-    <button @click="counter++">+1</button>
+    <header>
+      <NavBar 
+        title="BreakingBad"
+        :links="routeLinks"
+      />
+    </header>
+
+    <main>
+      <RouterView />
+    </main>
+
   </div>
 </template>
 

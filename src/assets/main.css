@@ -33,3 +33,12 @@ a,
     padding: 0 2rem;
   }
 }
+
+.router-link-active {
+  color: grey !important;
+  text-decoration: underline;
+}
+
+.router-link-exact-active{
+  text-decoration: none !important;
+}
